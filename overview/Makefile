@@ -1,5 +1,5 @@
-CATEGORY=	DT116G/lectures
-FILES=		intrusion.tex literature.tex literature.bib
+CATEGORY=	security/lectures
+FILES=		intrusion.tex literature.tex infosak.bib
 FILES+= 	dids.pdf honeypot.pdf profiles.pdf
 #FILES+= 	agent.pdf bloomperf.pdf pwdhash.pdf
 DOCUMENTS=	intrusion.pdf
@@ -18,11 +18,11 @@ intrusion.pdf: ${FILES}
 TARBALL_FILES= 	${FILES} Makefile.export
 
 Makefile.export: Makefile
-literature.bib: ../../literature.bib
+infosak.bib: ../../infosak.bib
 	${CP} $^ $@
 
 clean:
-	${RM} literature.bib
+	${RM} infosak.bib
 #endexport
 
 miun.depend.mk:
