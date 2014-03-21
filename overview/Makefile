@@ -1,5 +1,5 @@
 CATEGORY=	security/lectures
-FILES=		intrusion.tex literature.tex infosak.bib
+FILES=		intrusion.tex literature.tex literature.bib
 FILES+= 	dids.pdf honeypot.pdf profiles.pdf
 #FILES+= 	agent.pdf bloomperf.pdf pwdhash.pdf
 DOCUMENTS=	intrusion.pdf
@@ -22,7 +22,7 @@ literature.bib: ../../infosak.bib
 	${CP} $^ $@
 
 clean:
-	${RM} infosak.bib
+	${RM} literature.bib
 #endexport
 
 miun.depend.mk:
