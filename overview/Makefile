@@ -18,7 +18,7 @@ intrusion.pdf: ${FILES}
 TARBALL_FILES= 	${FILES} Makefile.export
 
 Makefile.export: Makefile
-infosak.bib: ../../infosak.bib
+literature.bib: ../../infosak.bib
 	${CP} $^ $@
 
 clean:
