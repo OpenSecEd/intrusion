@@ -1,0 +1,99 @@
+\documentclass[a4paper,nocourse]{miunasgn}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[swedish,english]{babel}
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+\usepackage[today,nofancy]{svninfo}
+\usepackage{listings} 
+\usepackage{varioref,prettyref}
+\usepackage[natbib,style=numeric-comp,maxbibnames=99,sorting=none]{biblatex}
+\addbibresource{literature.bib}
+\usepackage[listings,varioref,prettyref]{miunmisc}
+
+\svnInfo $Id$
+
+\courseid{DT145G}
+\course{Computer Security}
+\assignmenttype{Laboratory Assignment}
+\title{Host-Based Intrusion Detection}
+\author{Daniel Bosk\footnote{%
+  This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 
+  Unported license.
+	To view a copy of this license, visit 
+	\url{http://creativecommons.org/licenses/by-sa/3.0/}.
+}}
+\date{\svnId}
+
+\begin{document}
+\maketitle
+\thispagestyle{foot}
+\tableofcontents
+
+\section{Introduction}
+\label{sec:intro}
+This laboratory exercise will cover the topic of intrusion detection
+systems (IDS).
+An IDS monitors the activity of a system and alert the administrator if any 
+potential threats are detected.
+This laboratory work will focus on host-based intrusion detection systems 
+(HIDS), in particular OSSEC\footnote{%
+  URL: \url{http://www.ossec.net/}.
+}.
+
+
+\section{Aim}
+\label{sec:aim}
+After completion of this assignment you will
+\begin{itemize}
+    \input{aims.tex}
+\end{itemize}
+
+This laboratory assignment will cover the open source HIDS OSSEC.
+
+
+\section{Reading instructions}
+\label{sec:reading}
+\input{literature.tex}
+
+
+\section{Work}
+\label{sec:tasks}
+This section covers the work to be done and the next section covers how it will 
+be examined, and what to be done to pass it.
+
+Firstly you should install the OSSEC software.
+You can find it on URL
+\begin{center}
+  \url{http://www.ossec.net/}.
+\end{center}
+The installation procedure is documented both on the website and in 
+\cite{ossec2}, the instructions on the Web are of course more up-to-date.
+
+Once the system is installed and up-and-running, you should select one of the 
+features it was designed for.
+You will now evaluate this feature and prepare a demonstration of it.
+This demonstration should present at least the following:
+\begin{itemize}
+  \item What is interesting about this feature?
+  \item How you evaluated the feature.
+  \item A demonstration of its use.
+\end{itemize}
+
+
+\section{Examination}
+\label{sec:examination}
+As you will prepare a demonstration, this will be presented for the class.
+You are required to have some slides to present the feature and your 
+evaluation, and then of course the live demonstration.
+
+In summary you should do this:
+\begin{itemize}
+  \item You should hand in the slides (in PDF-format) in the course platform.
+  \item You should also give your presentation (demonstration), it should be at 
+    most 15 minutes long.
+\end{itemize}
+
+
+\printbibliography
+\end{document}
