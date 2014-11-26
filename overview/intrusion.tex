@@ -28,12 +28,9 @@
   Intrusion Detection
 }
 \author{Daniel Bosk}
-\institute[MIUN ICS]{%
-  Department of Information and Communication Systems (ICS),\\
+\institute[MIUN IKS]{%
+  Department of Information and Communication Systems,\\
   Mid Sweden University, Sundsvall.
-	%
-  %Avdelningen för informations- och kommunikationssytem (IKS),\\
-  %Mittuniversitetet, Sundsvall.
 }
 \date{\svnId}
 
@@ -41,7 +38,7 @@
 \logo{\pgfuseimage{university-logo}}
 
 \AtBeginSection[]{%
-	\begin{frame}<beamer>{Översikt}
+  \begin{frame}<beamer>{Overview}
 		\tableofcontents[currentsection]
 	\end{frame}
 }
@@ -52,12 +49,9 @@
   \titlepage
 \end{frame}
 
-\begin{frame}{Översikt}
+\begin{frame}{Overview}
 	\tableofcontents
 	% You might wish to add the option [pausesections]
-\end{frame}
-\begin{frame}{Litteratur}
-  \input{literature.tex}
 \end{frame}
 
 
@@ -104,20 +98,35 @@
 
     \item The ``hacker'' will look for targets of opportunities.
       Exploratory in nature.
-      Target design for IDSs.
 
+    \item This is the designated target for IDSs.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{\insertsubsectionhead}
+  \begin{itemize}
     \item The criminal organisations will target specific systems of interest.
-      They will try to obscure the usage patterns.
-      These usually make a quick hit, once in they gather as much information 
-      as possible and then leave.
-      Think APT.
-      A little harder for IDSs to detect due to quick nature.
 
+    \item They will try to obscure the usage patterns.
+
+    \item These usually make a quick hit, once in they gather as much 
+      information as possible and then leave.
+      Think APT.
+
+    \item A little harder for IDSs to detect due to quick nature.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{\insertsubsectionhead}
+  \begin{itemize}
     \item The insider will just take information available to him or her.
-      No access control is usually breached.
-      Counter by principle of least privilege, logs, strong authentication, 
+
+    \item This means no access control is usually breached.
+
+    \item Counter by principle of least privilege, logs, strong authentication, 
       terminate employees' accounts.
 
+    \item This is usually very hard for an IDS to detect.
   \end{itemize}
 \end{frame}
 
@@ -165,6 +174,7 @@
 \begin{frame}{\insertsubsectionhead}
   \begin{itemize}
     \item False positives: authorised users detected as intruders.
+
     \item False negatives: intruders detected as legitimate users.
 
     \item We can reasonably well distinguish masqueraders through past history.
@@ -239,7 +249,7 @@
 
 
 \section{Password Management}
-
+%
 %\subsection{The Vulnerability of Passwords}
 %
 %\begin{frame}{\insertsubsectionhead}
