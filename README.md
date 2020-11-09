@@ -9,8 +9,8 @@ maintainer is [Daniel Bosk][Maintainer].  The latest release can be found under
 [releases][Releases].  You can safely link directly to the PDFs found there.
 
 [OpenSecEd]: https://github.com/OpenSecEd
-[Maintainer]: https://github.com/Daniel Bosk
-[Releases]: https://github.com/OpenSecEd/<file>/releases
+[Maintainer]: https://github.com/dbosk
+[Releases]: https://github.com/OpenSecEd/intrusion/releases
 
 This module consists of several learning modules that are linked in this repo.  
 However, all required PDFs can be found under [releases][Releases]
