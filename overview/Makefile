@@ -1,33 +1,22 @@
-CATEGORY=	security/lectures
-FILES=		intrusion.tex literature.tex literature.bib
-FILES+= 	dids.pdf honeypot.pdf profiles.pdf
-#FILES+= 	agent.pdf bloomperf.pdf pwdhash.pdf
-DOCUMENTS=	intrusion.pdf
+.PHONY: all
+all: notes.pdf slides.pdf
 
-PACKAGE=		intrusion-src
-TARBALL_FILES=	${FILES} Makefile
+LATEXFLAGS+=	-shell-escape
 
-PUB_FILES=	${DOCUMENTS} ${PACKAGE}.tar.gz
+SRC+=		preamble.tex
+SRC+=		abstract.tex contents.tex
 
-USE_LATEXMK= 	yes
-USE_BIBLATEX= 	yes
+notes.pdf: notes.tex
+notes.pdf: ${SRC}
 
-intrusion.pdf: ${FILES}
+slides.pdf: slides.tex
+slides.pdf: ${SRC}
 
-#export no
-TARBALL_FILES= 	${FILES} Makefile.export
 
-Makefile.export: Makefile
-literature.bib: ../../infosak.bib
-	${CP} $^ $@
-
+.PHONY: clean
 clean:
-	${RM} literature.bib
-#endexport
+	${RM} notes.pdf slides.pdf
 
-miun.depend.mk:
-	wget http://ver.miun.se/build/$@
 
-include miun.depend.mk
-include miun.course.mk
-include miun.package.mk
+INCLUDE_MAKEFILES=../makefiles
+include ${INCLUDE_MAKEFILES}/tex.mk

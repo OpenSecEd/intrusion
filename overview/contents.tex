@@ -1,59 +1,4 @@
-% $Id$
-%\documentclass[handout]{beamer}
-\documentclass{beamer}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[swedish,english]{babel}
-\usepackage{url}
-\usepackage{varioref,prettyref}
-\usepackage{graphicx}
-\usepackage[today,nofancy]{svninfo}
-\usepackage{color}
-\usepackage{keystroke}
-\usepackage[natbib,style=alphabetic,maxbibnames=99,backend=bibtex8]{biblatex}
-\addbibresource{literature.bib}
-\usepackage[varioref,prettyref]{miunmisc}
-
-\svnInfo $Id$
-
-\mode<presentation>
-{
-  \usetheme{Frankfurt}
-  \setbeamercovered{transparent}
-  \usecolortheme{seagull}
-}
-\setbeamertemplate{footline}{\insertframenumber}
-
-\title[Intrusion]{%
-  Intrusion Detection
-}
-\author{Daniel Bosk}
-\institute[MIUN IKS]{%
-  Department of Information and Communication Systems,\\
-  Mid Sweden University, Sundsvall.
-}
-\date{\svnId}
-
-\pgfdeclareimage[height=0.65cm]{university-logo}{MU_logotyp_int_CMYK.pdf}
-\logo{\pgfuseimage{university-logo}}
-
-\AtBeginSection[]{%
-  \begin{frame}<beamer>{Overview}
-		\tableofcontents[currentsection]
-	\end{frame}
-}
-
-\begin{document}
-
-\begin{frame}
-  \titlepage
-\end{frame}
-
-\begin{frame}{Overview}
-	\tableofcontents
-	% You might wish to add the option [pausesections]
-\end{frame}
-
+\mode*
 
 % Since this a solution template for a generic talk, very little can
 % be said about how it should be structured. However, the talk length
@@ -70,7 +15,7 @@
 
 \subsection{Intruders}
 
-\begin{frame}{\insertsubsectionhead}
+\begin{frame}
   \begin{description}
     \item[Masquerader] A user who is not authorized to use the system who 
       penetrates the access control of the system to exploit the user account 
@@ -91,7 +36,7 @@
 
 \subsection{Behaviour Patterns}
 
-\begin{frame}{\insertsubsectionhead}
+\begin{frame}
   \begin{itemize}
     \item The behaviour will typically be different from that of ordinary 
       users.
@@ -103,7 +48,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{\insertsubsectionhead}
+\begin{frame}
   \begin{itemize}
     \item The criminal organisations will target specific systems of interest.
 
@@ -117,7 +62,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{\insertsubsectionhead}
+\begin{frame}
   \begin{itemize}
     \item The insider will just take information available to him or her.
 
@@ -132,7 +77,7 @@
 
 \subsection{Intrusion Techniques}
 
-\begin{frame}{\insertsubsectionhead}
+\begin{frame}
   \begin{enumerate}
     \item Try default passwords with standard accounts.
     \item Exhaustively try all short passwords.
@@ -151,7 +96,7 @@
 
 \subsection{Intrusion Detection}
 
-\begin{frame}{\insertsubsectionhead}
+\begin{frame}
   \begin{itemize}
     \item Intrusion detection is a difficult task.
 
@@ -163,7 +108,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{\insertsubsectionhead}
+\begin{frame}
   \begin{figure}
     \includegraphics[height=0.7\textheight]{profiles.pdf}
     \caption{User behavioural profiles.
@@ -171,7 +116,7 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}{\insertsubsectionhead}
+\begin{frame}
   \begin{itemize}
     \item False positives: authorised users detected as intruders.
 
@@ -188,7 +133,7 @@
 
 \subsection{Audit Records}
 
-\begin{frame}{\insertsubsectionhead}
+\begin{frame}
   \begin{itemize}
     \item Native audit records: log all (relevant) user activity using system 
       logs.
@@ -203,7 +148,7 @@
 
 \subsection{Statistical Anomaly Detection}
 
-\begin{frame}{\insertsubsectionhead}
+\begin{frame}
   \begin{itemize}
     \item Threshold detection: defining thresholds independent of users.
 
@@ -215,7 +160,7 @@
 
 \subsection{Rule-Based Intrusion Detection}
 
-\begin{frame}{\insertsubsectionhead}
+\begin{frame}
   \begin{itemize}
     \item Rule-based detection: defines rules for attack patterns, also called 
       signature detection.
@@ -224,12 +169,12 @@
 
 %\subsection{The Base-Rule Fallacy}
 %
-%\begin{frame}{\insertsubsectionhead}
+%\begin{frame}
 %\end{frame}
 
 \subsection{Distributed Intrusion Detection}
 
-\begin{frame}{\insertsubsectionhead}
+\begin{frame}
   \begin{figure}
     \includegraphics[height=0.7\textheight]{dids.pdf}
     \caption{Distributed Intrusion Detection System.
@@ -239,7 +184,7 @@
 
 \subsection{Honeypots}
 
-\begin{frame}{\insertsubsectionhead}
+\begin{frame}
   \begin{figure}
     \includegraphics[height=0.7\textheight]{honeypot.pdf}
     \caption{An illustration of honeypots.
@@ -252,37 +197,28 @@
 %
 %\subsection{The Vulnerability of Passwords}
 %
-%\begin{frame}{\insertsubsectionhead}
+%\begin{frame}
 %\end{frame}
 %
 %\subsection{The Use of Hashed Passwords}
 %
-%\begin{frame}{\insertsubsectionhead}
+%\begin{frame}
 %\end{frame}
 %
 %\subsection{User Password Choices}
 %
-%\begin{frame}{\insertsubsectionhead}
+%\begin{frame}
 %\end{frame}
 %
 %\subsection{Password Selection Strategies}
 %
-%\begin{frame}{\insertsubsectionhead}
+%\begin{frame}
 %\end{frame}
 %
 %\subsection{Bloom Filter}
 %
-%\begin{frame}{\insertsubsectionhead}
+%\begin{frame}
 %\end{frame}
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[allowframebreaks]{Referenser}
-	\small
-  \printbibliography
-\end{frame}
-
-\end{document}
 
