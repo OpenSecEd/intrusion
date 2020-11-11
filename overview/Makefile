@@ -25,7 +25,7 @@ $(addprefix figs/,${FIGS})::
 
 .PHONY: clean
 clean:
-	{RM} notes.pdf slides.pdf
+	${RM} notes.pdf slides.pdf
 
 
 INCLUDE_MAKEFILES=../makefiles
