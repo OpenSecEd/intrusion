@@ -11,6 +11,8 @@ FIGS+= 		skatteverket-hack.png
 FIGS+=		behaviour-profiles.pdf
 FIGS+=		network-rotated.pdf
 FIGS+=		network-layers.pdf
+FIGS+=		ruag-turla.png
+FIGS+=		nsa-leak.png snowden.png
 
 
 notes.pdf: notes.tex
