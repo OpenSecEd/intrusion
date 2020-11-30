@@ -1,5 +1,5 @@
 .PHONY: all
-all: notes.pdf slides.pdf
+all: notes.pdf slides.pdf README.md
 
 LATEXFLAGS+=	-shell-escape
 
@@ -25,6 +25,10 @@ $(addprefix figs/,${FIGS})::
 	${MAKE} -C $(dir $@) $(notdir $@)
 
 
+README.md: video.md abstract.md
+	cat $^ > $@
+
+
 .PHONY: clean
 clean:
 	${RM} notes.pdf slides.pdf
@@ -32,3 +36,4 @@ clean:
 
 INCLUDE_MAKEFILES=../makefiles
 include ${INCLUDE_MAKEFILES}/tex.mk
+include ${INCLUDE_MAKEFILES}/doc.mk
